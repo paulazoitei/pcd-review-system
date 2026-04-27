@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Review Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Review Analytics Dashboard</div>
+  <div class="status">LIVE</div>
+</header>
+
+<main>
+  <section class="form-card">
+    <h2>Submit Review</h2>
+
+    <input id="apiUrl" value="http://localhost:3000/api" placeholder="API URL">
+    <input id="slug" placeholder="Article slug">
+    <input id="token" placeholder="Authorization token">
+    <textarea id="reviewText" placeholder="Write a review..."></textarea>
+
+    <button id="submitBtn">Submit Review</button>
+    <p id="formMessage"></p>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <div class="stat-value" id="total">0</div>
+      <div class="stat-label">Total Reviews</div>
+    </div>
+
+    <div class="stat-card positive">
+      <div class="stat-value" id="positive">0</div>
+      <div class="stat-label">Positive</div>
+    </div>
+
+    <div class="stat-card negative">
+      <div class="stat-value" id="negative">0</div>
+      <div class="stat-label">Negative</div>
+    </div>
+  </section>
+
+  <section class="feed">
+    <h2>Live Feed</h2>
+    <div id="reviews"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
