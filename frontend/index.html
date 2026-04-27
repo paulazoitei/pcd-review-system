@@ -9,14 +9,14 @@
 
 <header>
   <div class="logo">Review Analytics Dashboard</div>
-  <div class="status">LIVE</div>
+  <div class="status" id="wsStatus">CONNECTING</div>
 </header>
 
 <main>
   <section class="form-card">
     <h2>Submit Review</h2>
 
-    <input id="apiUrl" value="http://localhost:3000/api" placeholder="API URL">
+    <input id="apiUrl" value="https://realworld-api-5106786869.europe-west1.run.app/api" placeholder="API URL">
     <input id="slug" placeholder="Article slug">
     <input id="token" placeholder="Authorization token">
     <textarea id="reviewText" placeholder="Write a review..."></textarea>
@@ -39,6 +39,11 @@
     <div class="stat-card negative">
       <div class="stat-value" id="negative">0</div>
       <div class="stat-label">Negative</div>
+    </div>
+
+    <div class="stat-card neutral">
+      <div class="stat-value" id="neutral">0</div>
+      <div class="stat-label">Neutral</div>
     </div>
   </section>
 
